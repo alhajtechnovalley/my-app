@@ -8,7 +8,7 @@ node{
       sh "${mvnHome}/bin/mvn clean package"
 	  sh 'mv target/myweb*.war target/newapp.war'
    }
-    stage('Build Docker Imager'){
+    stage('Build Docker Imager for my Nexus'){
    sh 'docker build -t alhaj1986/myprojweb:0.0.1 .'
    }
    stage('Docker Image Push'){
